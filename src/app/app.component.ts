@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   peoples: any[] = [];
   nombre: string;
   altura: string;
+  peso: string;
+  colorCabello: string;
 
   constructor(private dataSWService: DataSWService) { }
   ngOnInit() {
@@ -20,6 +22,9 @@ export class AppComponent implements OnInit {
       (data) => { // Success
         this.nombre = data['name'];
         this.altura = data['height'];
+        this.peso = data['mass'];
+        this.colorCabello = data['hair_color'];
+        
         console.log(data);
       },
       (error) => {
