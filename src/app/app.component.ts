@@ -11,16 +11,25 @@ export class AppComponent implements OnInit {
   title = 'apiC';
   peoples: any[] = [];
   nombre: string;
+  altura: string;
 
   constructor(private dataSWService: DataSWService) { }
   ngOnInit() {
     this.dataSWService.getPeople(1)
     .subscribe(
       (data) => { // Success
-        this.peoples = data['results'];
         this.nombre = data['name'];
-        const altura = data['height'];
+        this.altura = data['height'];
         console.log(data);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    this.dataSWService.getPeoples()
+    .subscribe(
+      (data) => { // Success
+        this.peoples = data['results'];
       },
       (error) => {
         console.error(error);
