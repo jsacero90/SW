@@ -5,12 +5,16 @@ import {DataSWService} from './servicios/data-sw.service';
 
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
