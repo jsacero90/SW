@@ -8,11 +8,23 @@ import { from } from 'rxjs';
 export class DataSWService {
 
   constructor(private http: HttpClient) { }
+//Peoles
+  getPeoples() {
+    return this.http.get('https://swapi.co/api/people/');
+  }
 
   getPeople(id: number) {
     return this.http.get('https://swapi.co/api/people/' + id);
   }
-  getPeoples() {
-    return this.http.get('https://swapi.co/api/people/');
-  }
+
+//Films
+getFilms() {
+  return this.http.get('https://swapi.co/api/films/');
+}
+
+getFilm(id: number) {
+  return this.http.get('https://swapi.co/api/films/' + id);
+}
+
+
 }
