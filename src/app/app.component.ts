@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataSWService} from './data-sw.service';
+import {DataSWService} from './servicios/data-sw.service';
 
 
 @Component({

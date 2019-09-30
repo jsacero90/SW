@@ -8,7 +8,7 @@ import { from } from 'rxjs';
 export class DataSWService {
 
   constructor(private http: HttpClient) { }
-//Peoles
+//Peoples
   getPeoples() {
     return this.http.get('https://swapi.co/api/people/');
   }
