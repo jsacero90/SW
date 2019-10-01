@@ -10,11 +10,12 @@ import {DataSWService} from '../servicios/data-sw.service';
 export class ContentsComponent implements OnInit {
   cantidad: string;
   peoples: any[] = [];
+  vehicles: any[] = [];
   nombre: string;
+  nombreVehiculo: string;
   altura: string;
   peso: string;
   colorCabello: string;
-  navs: any[] = [];
   navsNombre: string;
 
   constructor(private dataSWService: DataSWService) { }
@@ -38,6 +39,28 @@ export class ContentsComponent implements OnInit {
     .subscribe(
       (data) => { // Success
         this.peoples = data['results'];
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    this.dataSWService.getvehicle(1)
+    .subscribe(
+      (data) => { // Success
+        this.nombreVehiculo = data['name'];
+
+        console.log(data);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    this.dataSWService.getvehicles()
+    .subscribe(
+      (data) => { // Success
+        this.vehicles = data['results'];
+
+        console.log(data);
       },
       (error) => {
         console.error(error);

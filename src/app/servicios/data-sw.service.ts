@@ -18,21 +18,21 @@ export class DataSWService {
   }
 
 //Films
-getFilms() {
-  return this.http.get('https://swapi.co/api/films/');
-}
-
-getFilm(id: number) {
-  return this.http.get('https://swapi.co/api/films/' + id);
-}
-
-//Naves
-  getNavs(){
-    return this.http.get('https://swapi.co/api/vehicles');
+  getFilms() {
+    return this.http.get('https://swapi.co/api/films/');
   }
 
-  getNav(id: number){
-    return this.http.get('https://swapi.co/api/vehicles' + id);
+  getFilm(id: number) {
+    return this.http.get('https://swapi.co/api/films/' + id);
+  }
+
+//vehicles
+  getvehicles(){
+    return this.http.get('https://swapi.co/api/vehicles/');
+  }
+
+  getvehicle(id: number){
+    return this.http.get('https://swapi.co/api/vehicles/' + id);
   }
 
 }
