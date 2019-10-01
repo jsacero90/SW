@@ -9,6 +9,7 @@ import {DataSWService} from '../servicios/data-sw.service';
 
 export class ContentsComponent implements OnInit {
   title = 'apiC';
+  cantidad: string;
   peoples: any[] = [];
   nombre: string;
   altura: string;
@@ -20,6 +21,7 @@ export class ContentsComponent implements OnInit {
     this.dataSWService.getPeople(1)
     .subscribe(
       (data) => { // Success
+        this.cantidad = data['count']
         this.nombre = data['name'];
         this.altura = data['height'];
         this.peso = data['mass'];
