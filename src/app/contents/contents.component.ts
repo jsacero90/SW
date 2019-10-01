@@ -8,7 +8,6 @@ import {DataSWService} from '../servicios/data-sw.service';
 })
 
 export class ContentsComponent implements OnInit {
-  title = 'apiC';
   cantidad: string;
   peoples: any[] = [];
   nombre: string;
@@ -18,7 +17,7 @@ export class ContentsComponent implements OnInit {
 
   constructor(private dataSWService: DataSWService) { }
   ngOnInit() {
-    this.dataSWService.getPeople(1)
+    this.dataSWService.getPeoples()
     .subscribe(
       (data) => { // Success
         this.cantidad = data['count']
