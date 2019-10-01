@@ -26,5 +26,13 @@ getFilm(id: number) {
   return this.http.get('https://swapi.co/api/films/' + id);
 }
 
+//Naves
+  getNavs(){
+    return this.http.get('https://swapi.co/api/vehicles');
+  }
+
+  getNav(id: number){
+    return this.http.get('https://swapi.co/api/vehicles' + id);
+  }
 
 }

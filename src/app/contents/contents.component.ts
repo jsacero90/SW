@@ -14,6 +14,8 @@ export class ContentsComponent implements OnInit {
   altura: string;
   peso: string;
   colorCabello: string;
+  navs: any[] = [];
+  navsNombre: string;
 
   constructor(private dataSWService: DataSWService) { }
   ngOnInit() {
@@ -40,6 +42,26 @@ export class ContentsComponent implements OnInit {
       (error) => {
         console.error(error);
       }
+    );
+    //Naves
+    this.dataSWService.getNavs()
+    .subscribe(
+      (data) => { //Sucess
+        this.navsNombre = data['name'];
+      },
+      (error) => {
+        console.error(error);
+      } 
+    );
+
+    this.dataSWService.getNavs()
+    .subscribe(
+      (data) => { //Sucess
+        this.navs = data['results'];
+      },
+      (error) => {
+        console.error(error);
+      } 
     );
   }
 }

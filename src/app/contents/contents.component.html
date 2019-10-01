@@ -17,10 +17,6 @@
             <li>
               <label for="ColorCabello">Color Cabello: </label>{{ persona.hair_color }}
             </li><br>
-
-
-
-            
           </p>
         </div>
 
@@ -50,16 +46,16 @@
     <h1>Naves Espaciales</h1><br>
       <div class="wrapper_naves">
 
-        <div class="nave_container">
+        <div class="nave_container" *ngFor="let naves of navs">
           <img src="../../assets/images/x-wing.png" title="X-Wing">
-          <h1>Lorem ipsum</h1><br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1></h1><br><p>
+              <li>
+                  <label for="año">Año Nacimieto: </label>{{ naves.name }}
+              </li>
+          </p>
         </div>
 
-        <div class="nave_container">
+        <!-- <div class="nave_container">
           <img src="../../assets/images/millenium_falcon.png" title="Millenium Falcon">
           <h1>Lorem ipsum</h1><br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -84,7 +80,7 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+        </div> -->
       </div>
     <!--/div-->
     <div><a href="#"><p class="read_more_ne">Leer mas ...</p></a></div>
