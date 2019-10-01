@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContentsComponent } from './contents/contents.component';
 
 
 
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContentsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataSWService} from './servicios/data-sw.service';
+import {HeaderComponent} from './header/header.component';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit {
         this.altura = data['height'];
         this.peso = data['mass'];
         this.colorCabello = data['hair_color'];
-        
+
         console.log(data);
       },
       (error) => {
