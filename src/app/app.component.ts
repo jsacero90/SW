@@ -9,16 +9,16 @@ import {HeaderComponent} from './header/header.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'apiC';
+/*
   peoples: any[] = [];
   nombre: string;
   altura: string;
   peso: string;
   colorCabello: string;
 
-  constructor(private dataSWService: DataSWService) { }
-  ngOnInit() {
-    this.dataSWService.getPeople(1)
+  //constructor(private dataSWService: DataSWService) { }*/
+  ngOnInit() {}
+    /*this.dataSWService.getPeople(1)
     .subscribe(
       (data) => { // Success
         this.nombre = data['name'];
@@ -41,6 +41,6 @@ export class AppComponent implements OnInit {
         console.error(error);
       }
     );
-  }
+  }*/
 }
 

@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {DataSWService} from '../servicios/data-sw.service';
 
 @Component({
-  selector: 'app-contents',
-  templateUrl: './contents.component.html',
-  styleUrls: ['./contents.component.scss']
+  selector: 'app-contentsmain',
+  templateUrl: './contentsmain.component.html',
+  styleUrls: ['./contentsmain.component.scss']
 })
 
-export class ContentsComponent implements OnInit {
+export class ContentsMainComponent implements OnInit {
   cantidad: string;
   peoples: any[] = [];
   vehicles: any[] = [];
