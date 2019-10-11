@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { identifierModuleUrl } from '@angular/compiler';
 
 
 
@@ -9,13 +10,19 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  datohijo: any;
+  datohijo: number;
+  Constructor() { }
 
-  ngOnInit() { }
+  funEviar(e)  {
 
-  funEviar(e) {
-    //console.log(e);
     this.datohijo = e;
+    console.log(this.datohijo)
   }
+  ngOnInit() {
+
+   }
+
+
+
 }
 

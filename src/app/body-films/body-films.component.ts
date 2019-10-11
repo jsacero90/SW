@@ -15,10 +15,11 @@ export class BodyFilmsComponent implements OnInit {
   obj_unidos: object;
   filmes: any[] = [];
   film: any[] = [];
-  @Input() indexF: number;
+  @Input()indexP;
 
   ngOnInit() {
-    console.log(this.indexF);
+
+    console.log(this.indexP);
     this.dataSWService.getFilms()
       .subscribe(
         (data) => { // Success
@@ -31,7 +32,7 @@ export class BodyFilmsComponent implements OnInit {
             this.filmes[item] = this.obj_unidos;
           }
           this.film = this.filmes[4];
-          console.log(this.filmes);
+          //console.log(this.filmes);
         },
         (error) => {
           console.error(error);
