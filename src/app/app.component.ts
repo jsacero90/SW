@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 
 
@@ -9,6 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  ngOnInit() {}
+  datohijo: any;
+
+  ngOnInit() { }
+
+  funEviar(e) {
+    //console.log(e);
+    this.datohijo = e;
+  }
 }
 

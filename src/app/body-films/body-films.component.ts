@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ImagenesService } from '../servicios/img-sw.service';
 import { DataSWService } from '../servicios/data-sw.service';
-
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-body-films',
   templateUrl: './body-films.component.html',
@@ -9,12 +9,16 @@ import { DataSWService } from '../servicios/data-sw.service';
 })
 export class BodyFilmsComponent implements OnInit {
 
-  constructor(private imagenesService: ImagenesService, private dataSWService: DataSWService) { }
+  constructor(private imagenesService: ImagenesService,
+              private dataSWService: DataSWService,
+              private sanitizer: DomSanitizer) { }
   obj_unidos: object;
   filmes: any[] = [];
+  film: any[] = [];
+  @Input() indexF: number;
 
   ngOnInit() {
-
+    console.log(this.indexF);
     this.dataSWService.getFilms()
       .subscribe(
         (data) => { // Success
@@ -26,12 +30,15 @@ export class BodyFilmsComponent implements OnInit {
             this.obj_unidos = Object.assign(films[i], films2[i]);
             this.filmes[item] = this.obj_unidos;
           }
-
-          console.log(this.filmes);
+          this.film = this.filmes[0];
+          console.log(this.film);
         },
         (error) => {
           console.error(error);
         }
       );
+  }
+  getVideoUrl(item) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + item);
   }
 }
