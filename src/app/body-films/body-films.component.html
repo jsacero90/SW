@@ -1,22 +1,22 @@
 
 <div>
-  {{indexF}}
+  <input type="hidden" [value]="getfimes(disparador['idFim'])">
 </div>
 <section>
-  <img class="logo" src="{{film.logo}}" title="Inicio"><br>
+  <img class="logo" [src]="film['logo']" title="Inicio"><br>
 </section>
 
 <section class="episode-i_container">
 
     <div class="article">
-      <img src="{{film.imagen}}" width="300px" height="450px">
+      <img [src]="film['imagen']" width="300px" height="450px">
     </div>
 
     <div class="right">
-      <p>{{film.opening_crawl}}</p>
+      <p>{{film['opening_crawl']}}</p>
     </div>
 <div
-class="trailer"><iframe width="560" height="315" [src]="getVideoUrl(film.video)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+class="trailer"><iframe width="560" height="315" [src]="getVideoUrl(film['video'])" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </section>
 

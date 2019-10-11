@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { DisparadorService } from '../servicios/disparador.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,13 +7,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() indexF = new EventEmitter<number>();
-
-  constructor() { }
+  constructor(private disparador: DisparadorService) { }
 
   ngOnInit() {
   }
-  llevar(index: number) {
-    this.indexF.emit(index);
+  public llevar(index: number) {
+    this.disparador.llegada(index);
   }
 }

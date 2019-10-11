@@ -10,14 +10,8 @@ import { identifierModuleUrl } from '@angular/compiler';
 })
 export class AppComponent implements OnInit {
 
-  datohijo: number;
   Constructor() { }
 
-  funEviar(e)  {
-
-    this.datohijo = e;
-    console.log(this.datohijo)
-  }
   ngOnInit() {
 
    }
