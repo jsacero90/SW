@@ -30,8 +30,8 @@ export class BodyFilmsComponent implements OnInit {
             this.obj_unidos = Object.assign(films[i], films2[i]);
             this.filmes[item] = this.obj_unidos;
           }
-          this.film = this.filmes[0];
-          console.log(this.film);
+          this.film = this.filmes[4];
+          console.log(this.filmes);
         },
         (error) => {
           console.error(error);
