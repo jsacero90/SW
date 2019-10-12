@@ -44,4 +44,38 @@ export class ImagenesService {
       },
     };
   }
+  getImagP() {
+    return {
+      0: {
+        imagen: '../../assets/images/01_people/01_Luke_Skywalker.jpg'
+      },
+      1: {
+        imagen: '../../assets/images/01_people/02_C-3PO.jpg'
+      },
+      2: {
+        imagen: '../../assets/images/01_people/03_R2-D2.jpeg'
+      },
+      3: {
+        imagen: '../../assets/images/01_people/04_Darth_Vader.jpeg'
+      },
+      4: {
+        imagen: '../../assets/images/01_people/05_Leia Organa.jpg'
+      },
+      5: {
+        imagen: '../../assets/images/01_people/06_Owen_Lars.jpg'
+      },
+      6: {
+        imagen: '../../assets/images/01_people/07_Beru_Whitesun_lars.jpg'
+      },
+      7: {
+        imagen: '../../assets/images/01_people/08_R5-D4.jpg'
+      },
+      8: {
+        imagen: '../../assets/images/01_people/09_Biggs_Darklighter.png'
+      },
+      9: {
+        imagen: '../../assets/images/01_people/10_Obi-Wan_Kenobi.jpg'
+      },
+    };
+  }
 }
