@@ -25,21 +25,6 @@ export class ContentsMainComponent implements OnInit {
     this.dataSWService.getPeoples()
       .subscribe(
         (data) => { // Success
-          this.cantidad = data['count']
-          this.nombre = data['name'];
-          this.altura = data['height'];
-          this.peso = data['mass'];
-          this.colorCabello = data['hair_color'];
-
-          console.log(data);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-    this.dataSWService.getPeoples()
-      .subscribe(
-        (data) => { // Success
           const people = data['results'];
           const people2 = this.imagenesService.getImagP();
           // tslint:disable-next-line: forin
@@ -48,29 +33,24 @@ export class ContentsMainComponent implements OnInit {
             this.obj_unidos = Object.assign(people[i], people2[i]);
             this.peoples[item] = this.obj_unidos;
           }
-          console.log(this.peoples);
         },
         (error) => {
           console.error(error);
         }
       );
-    /*this.dataSWService.getvehicle(1)
-      .subscribe(
-        (data) => { // Success
-          this.nombreVehiculo = data['name'];
-
-          console.log(data);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );*/
     this.dataSWService.getvehicles()
       .subscribe(
         (data) => { // Success
-          this.vehicles = data['results'];
+          const vehicles = data['results'];
+          const vehicles2 = this.imagenesService.getImagV();
+          // tslint:disable-next-line: forin
+          for (const i in vehicles) {
+            const item = parseInt(i);
+            let union;
+            union = Object.assign(vehicles[i], vehicles2[i]);
+            this.vehicles[item] = union;
+          }
 
-          console.log(data);
         },
         (error) => {
           console.error(error);

@@ -10,7 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentsMainComponent } from './contentsMain/contentsmain.component';
 import { BodyFilmsComponent } from './body-films/body-films.component';
-import { DisparadorService } from './servicios/disparador.service';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -29,7 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
 
   ],
-  providers: [DataSWService, ImagenesService, DisparadorService],
+  providers: [DataSWService, ImagenesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

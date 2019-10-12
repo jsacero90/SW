@@ -78,4 +78,38 @@ export class ImagenesService {
       },
     };
   }
+  getImagV() {
+    return{
+      0: {
+        imagen: '../../assets/images/04_vehicles/04_Sand_Crawler.jpg'
+      },
+      1: {
+        imagen: '../../assets/images/04_vehicles/06_T-16_skyhopper.png'
+      },
+      2: {
+        imagen: '../../assets/images/04_vehicles/07_X-34_landspeeder.jpg'
+      },
+      3: {
+        imagen: '../../assets/images/04_vehicles/8_TIE_LN_starfighter.png'
+      },
+      4: {
+        imagen: '../../assets/images/04_vehicles/14_Snowspeeder.png'
+      },
+      5: {
+        imagen: '../../assets/images/04_vehicles/16_TIE_bomber.png'
+      },
+      6: {
+        imagen: '../../assets/images/04_vehicles/18_AT-AT.png'
+      },
+      7: {
+        imagen: '../../assets/images/04_vehicles/19_AT-ST.png'
+      },
+      8: {
+        imagen: '../../assets/images/04_vehicles/20_Storm_IV_Twin-Pod_cloud_car.jpg'
+      },
+      9: {
+        imagen: '../../assets/images/04_vehicles/24_Sail_barge.png'
+      },
+    };
+  }
 }

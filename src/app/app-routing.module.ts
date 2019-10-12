@@ -7,9 +7,9 @@ import { BodyFilmsComponent } from './body-films/body-films.component';
 
 const routes: Routes = [
   {path: 'home', component: ContentsMainComponent },
-  {path: '', component: ContentsMainComponent },
-  {path: '**', component: ContentsMainComponent },
-  {path: 'films', component: BodyFilmsComponent }
+  //{path: '', component: ContentsMainComponent },
+  //{path: '**', component: ContentsMainComponent },
+  {path: 'films/:index', component: BodyFilmsComponent }
 ];
 
 @NgModule({
