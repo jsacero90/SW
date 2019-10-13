@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DisparadorService } from '../servicios/disparador.service';
+import { DataSWService } from '../servicios/data-sw.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,11 +7,20 @@ import { DisparadorService } from '../servicios/disparador.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private disparador: DisparadorService) { }
-
+  constructor(private data: DataSWService) { }
+datosF: any[] = [];
+filterPost = '';
+show:boolean = false;
   ngOnInit() {
+this.data.getFilms().subscribe(
+  (data) => {
+    this.datosF = data['results'];
+    console.log(this.datosF);
+},
+
+);
   }
-  public llevar(index: number) {
-    this.disparador.llegada(index);
+  getPress(e) {
+    this.show = !this.show;
   }
 }

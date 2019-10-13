@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ImagenesService } from '../servicios/img-sw.service';
 import { DataSWService } from '../servicios/data-sw.service';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -11,22 +11,20 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class BodyFilmsComponent implements OnInit {
 
   constructor(private imagenesService: ImagenesService,
-    private dataSWService: DataSWService,
-    private sanitizer: DomSanitizer,
-    private rutaActiva: ActivatedRoute) { }
+              private dataSWService: DataSWService,
+              private sanitizer: DomSanitizer,
+              private rutaActiva: ActivatedRoute) { }
   // tslint:disable-next-line: variable-name
   obj_unidos: object;
   filmes: any[] = [];
-  film;
+  film = new Object();
   idF;
   id;
-  getCargar() {
 
-  }
   ngOnInit() {
     this.idF = this.rutaActiva.params.subscribe(params => {
       this.id = + params['index'];
-      console.log(this.id);
+
     });
 
     this.dataSWService.getFilms()
@@ -43,10 +41,6 @@ export class BodyFilmsComponent implements OnInit {
             this.filmes[item] = this.obj_unidos;
 
           }
-
-          const id = parseInt(this.id) - 1;
-          console.log(id);
-          this.film = this.filmes[id];
         },
         (error) => {
           console.error(error);
@@ -55,7 +49,6 @@ export class BodyFilmsComponent implements OnInit {
   }
   getCarga(p) {
     const id = parseInt(this.id) - 1;
-    console.log(id);
     this.film = this.filmes[id];
   }
   getVideoUrl(item) {
