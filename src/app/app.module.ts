@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentsMainComponent } from './contentsMain/contentsmain.component';
 import { BodyFilmsComponent } from './body-films/body-films.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,13 +22,14 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     FooterComponent,
     ContentsMainComponent,
-    BodyFilmsComponent
+    BodyFilmsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-
+    FormsModule
   ],
   providers: [DataSWService, ImagenesService],
   bootstrap: [AppComponent]
