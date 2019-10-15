@@ -3,7 +3,7 @@
       <div class="wrapper_personajes">
 
         <div class="personaje_container" *ngFor="let persona of peoples">
-          <img [src]="persona['imagen']" title="c3po" width="30%">
+          <img [src]="persona['imagen']" title="c3po" width="200px" height="250px" style="padding: 0px 8px 0px;">
           <h5>{{ persona.name }}</h5><br>
             <li>
               <label for="año">Año Nacimieto: </label> {{ persona.birth_year }}
@@ -25,7 +25,7 @@
       <div class="wrapper_naves">
 
         <div class="nave_container" *ngFor="let pri of nave">
-          <img src="*" title="X-Wing" width="30%">
+          <img src="*" title="X-Wing" width="200px" height="250px" style="padding: 0px 8px 0px 0px;">
           <h1></h1><br><p>
               <li>
                   <label for="año">Año Nacimieto: </label>{{ naves.name }}
@@ -34,7 +34,7 @@
         </div>
 
         <div class="nave_container" *ngFor="let vehiculo of vehicles">
-          <img [src]="vehiculo['imagen']" width="60%" >
+          <img [src]="vehiculo['imagen']" width="200px" height="250px" style="padding: 0px 8px 0px 0px;" >
           <h5>{{vehiculo.name}}</h5><br>
           <li>
             <label for="año">Modelo : </label> {{ vehiculo.model }}
