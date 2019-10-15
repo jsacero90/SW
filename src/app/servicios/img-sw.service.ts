@@ -39,7 +39,7 @@ export class ImagenesService {
       },
       6: {
         imagen: '../../assets/images/02_films/07_the_force_awakens.jpg',
-        logo: '../../assets/images/',
+        logo: '../../assets/images/episode_vII.png',
         video: `sGbxmsDFVnE`
       },
     };
