@@ -16,7 +16,7 @@
 
   <div class="search_box">
         <input class="busqueda" type="text" placeholder="Buscar ..." name="filterPost" [(ngModel)]="filterPost" (keyup)="getPress($event)" name="tbox1">
-        <div  *ngFor="let prueba of datosF | filter:filterPost; let indice=index" ><a routerLink="/films/{{indice+1}}"><label *ngIf="show" >{{prueba.title}}</label><br></a></div>
+        <div  *ngFor="let dato of datosF | filter:filterPost;" ><a style="text-decoration:none; color: white;" routerLink="/films/{{dato.id}}"><label *ngIf="show" >{{dato.title}}</label><br></a></div>
       </div>
 </header>
 <section class="seccion_01">

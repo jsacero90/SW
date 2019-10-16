@@ -3,6 +3,7 @@ import { ImagenesService } from '../servicios/img-sw.service';
 import { DataSWService } from '../servicios/data-sw.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params } from '@angular/router';
+
 @Component({
   selector: 'app-body-films',
   templateUrl: './body-films.component.html',

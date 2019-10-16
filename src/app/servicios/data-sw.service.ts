@@ -35,4 +35,7 @@ export class DataSWService {
     return this.http.get('https://swapi.co/api/vehicles/' + id);
   }
 
+  getVehiculoF(url: string) {
+    return this.http.get(url);
+  }
 }
